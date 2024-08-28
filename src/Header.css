@@ -1,0 +1,72 @@
+/* Header.css */
+
+header {
+  display: flex;
+  justify-content: center; /* Center the nav horizontally */
+  align-items: center;
+  padding: 2em;
+  color: white;
+  position: relative; /* Add relative positioning to allow absolute positioning of the menu icon */
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  font-size: 2em;
+  top: 0.5em; /* Align the menu icon to the top */
+  position: absolute; /* Position the menu icon absolutely */
+  left: 0.5em; /* Align the menu icon to the right */
+}
+
+nav {
+  display: none; /* Hide the navigation by default */
+}
+
+nav.nav-open {
+  display: block; /* Show the navigation when the menu is open */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 1em 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+nav a:hover{
+  color: orange;
+  font-weight: bold;
+  border-bottom: 4px solid blue;
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none; /* Hide the hamburger menu on larger screens */
+  }
+
+  nav {
+    display: block; /* Show the navigation by default on larger screens */
+  }
+
+  nav ul {
+    flex-direction: row; /* Display the navigation links horizontally */
+  }
+
+  nav ul li {
+    margin: 0 1em;
+  }
+}
