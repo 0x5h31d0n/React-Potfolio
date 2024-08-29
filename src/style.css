@@ -135,6 +135,7 @@ p {
   padding: 1em;
 }
 
+
 /* Styles for larger screens */
 @media (min-width: 600px) {
   section {
@@ -167,6 +168,23 @@ p {
 
   .icons img {
     width: 80px;
+  }
+
+  .edu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+  }
+
+  .Education {
+    align-self: flex-start;
+  }
+
+  .degree {
+    font-weight: 700;
+    align-self: flex-start;
   }
 }
 
