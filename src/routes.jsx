@@ -5,6 +5,7 @@ import Projects from './Components/Projects';
 import HomePage from './Components/HomePage';
 import Contact from './Components/Contact';
 import Resume from './Components/Resume';
+import Footer from './Components/Footer';
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

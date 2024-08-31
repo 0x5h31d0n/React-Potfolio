@@ -12,7 +12,7 @@ function Hero() {
           <h1>Hello There👋🏻, <br></br>Im <a className="name" href='/'>Sheldon Menezes</a></h1>
           <h2>
             <ReactTyped
-              strings={['developer', 'cyber security enthusiast', 'CTF player', 'bug bounty hunter']}
+              strings={['developer', 'Infosec enthusiast', 'CTF player', 'bug bounty hunter']}
               typeSpeed={40}
               backSpeed={50}
               loop

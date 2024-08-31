@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
+  font-weight: 500;
   padding: 0;
   color: white;
   background-color: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -11,9 +17,9 @@ section {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: justify;
-  font-weight: 550;
+  text-shadow: 1px 1px 5px blue;
 }
 
 /* About section styles */
@@ -28,6 +34,7 @@ p {
 
 .about h2 {
   align-self: flex-start; /* Center text horizontally */
+  font-size: 1.5rem;
 }
 
 .about-content {
@@ -38,6 +45,25 @@ p {
   text-align: center; /* Center text for mobile view */
 }
 
+.college {
+  font-size: 1.2rem;
+}
+
+.Education{
+  padding-bottom: 4em;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #0f0f0f;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  padding: 1em;
+  box-shadow: 0 4px 8px #3c6ffa;
+}
 /* Hero section styles */
 #hero {
   display: flex;
@@ -135,6 +161,11 @@ p {
   padding: 1em;
 }
 
+.footer a{
+  color: white;
+  text-decoration: none;
+}
+
 
 /* Styles for larger screens */
 @media (min-width: 600px) {
@@ -164,6 +195,9 @@ p {
   p {
     padding: 0; /* Ensures text wraps nicely */
     margin-left: 0;
+    font-size: 1.3em;
+    font-weight: 350;
+    text-shadow: 1px 1px 5px blue;
   }
 
   .icons img {
@@ -180,12 +214,18 @@ p {
 
   .Education {
     align-self: flex-start;
+    padding: 1em;
   }
 
   .degree {
     font-weight: 700;
     align-self: flex-start;
   }
+
+  .footer{
+  font-size: 0.7rem;
+}
+
 }
 
 /* Responsive adjustments for even larger screens */

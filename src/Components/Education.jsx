@@ -11,7 +11,7 @@ const Education = () => {
           <div className="lower-education">
           <h4>👉🏻 Computer Science</h4>
           <p>📆 2022 - 2026</p>
-          <p>🏫 St. Joseph Engg College</p>
+          <p className='college'>🏫 St. Joseph Engg College</p>
           </div>
         </div>
         <br/>
@@ -20,7 +20,7 @@ const Education = () => {
           <div className="lower-education">
           <h4>👉🏻 Science PCMC</h4>
           <p>📆 2020 - 2022</p>
-          <p>🏫 St. Aloysius PU College</p>
+          <p className='college'>🏫 St. Aloysius PU College</p>
           </div>
         </div>
         <br/>
@@ -29,7 +29,7 @@ const Education = () => {
           <div className="lower-education">
           <h4>👉🏻 General</h4>
           <p>📆 2017 - 2020</p>
-          <p>🏫 St. Aloysius High School</p>
+          <p className='college'>🏫 St. Aloysius High School</p>
           </div>
         </div>
       </div>
