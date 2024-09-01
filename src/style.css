@@ -18,7 +18,8 @@ section {
 
 p {
   font-size: 1.3em;
-  text-align: justify;
+  text-align: left;
+  text-wrap: pretty;
   text-shadow: 1px 1px 5px blue;
 }
 
@@ -43,15 +44,35 @@ p {
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   text-align: center; /* Center text for mobile view */
+  font-size: 0.93rem;
 }
 
 .college {
   font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  color: #c9c9c9;
+  font-weight: 400; /* Adjust font weight if necessary */
 }
 
 .Education{
   padding-bottom: 4em;
 }
+
+.degree {
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px black;
+  }
+
+.edu-stream {
+  letter-spacing: 1.5px;
+  color: #24daff;
+  font-size: 1rem;
+  font-weight: 400; /* Adjust font weight if necessary */
+  -webkit-font-smoothing: antialiased; /* Optimize font rendering for WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Optimize font rendering for Firefox on macOS */
+  text-rendering: optimizeLegibility; 
+}
+
 .footer{
   position: fixed;
   bottom: 0;
@@ -220,6 +241,7 @@ p {
   .degree {
     font-weight: 700;
     align-self: flex-start;
+    letter-spacing: 1.5px;
   }
 
   .footer{
