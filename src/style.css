@@ -125,7 +125,8 @@ p {
 
 .hero-animation {
   flex: 1;
-  max-width: 450px; /* Adjust this size based on your design */
+  max-width: 400px; /* Adjust this size based on your design */
+  max-height: 400px; /* Adjust this size based on your design */
   padding: 30px;
 }
 

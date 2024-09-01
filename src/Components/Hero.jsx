@@ -20,7 +20,7 @@ function Hero() {
           </h2>
         </div>
         <div className="hero-animation">
-          <Lottie animationData={skate} loop={true} className="animation" />
+          <Lottie animationData={skate} loop={true} className="animation" style={{ width: '400px', height: '400px' }} />
         </div>
       </div>
     </section>
