@@ -1,0 +1,178 @@
+/* Base styles (mobile-first) */
+#projects {
+  min-height: 100vh;
+  padding: 15px 10px 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-name {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding: 0 10px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.project-card {
+  border: 1.5px solid #6969f5;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.tech-tag {
+  background-color: #e0e0ff;
+  color: #6969f5;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.description {
+  margin: 12px 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.features-list {
+  margin-top: 12px;
+}
+
+.features-list h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.features-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.features-list li {
+  margin: 6px 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Tablet (768px and up) */
+@media screen and (min-width: 768px) {
+  #projects {
+    padding: 20px 20px 80px;
+  }
+
+  .top-name {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    max-width: 600px;
+    padding: 16px;
+  }
+
+  .image-container {
+    height: 500px;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .features-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+  #projects {
+    padding: 30px 0 100px;
+  }
+
+  .projects-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .image-container {
+    height: 400px;
+  }
+
+  .project-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .tech-tag {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .features-list h4 {
+    font-size: 1.2rem;
+  }
+
+  .features-list li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}

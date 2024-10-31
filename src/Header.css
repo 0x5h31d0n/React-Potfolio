@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav a:hover{
-  color: orange;
+  text-shadow: 1px 1px 1px grey;
   font-weight: bold;
   border-bottom: 4px solid blue;
 }
