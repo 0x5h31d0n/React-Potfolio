@@ -67,6 +67,8 @@ p {
   }
 
 .edu-stream {
+  margin-top: 0.2em;
+  padding-bottom: 0.5em;
   letter-spacing: 1.5px;
   color: hsl(var(--primary));
   font-size: 1rem;
@@ -110,7 +112,7 @@ p {
 
 .top {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 4.5rem;
   margin-bottom: 1rem;
   padding: 0 10px;
@@ -141,7 +143,7 @@ p {
 }
 
 .name {
-  color: #ff7b00;
+  color: hsl(var(--primary));
   text-decoration: none;
 }
 

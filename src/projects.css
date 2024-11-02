@@ -8,10 +8,10 @@
 
 .top-name {
   text-align: center;
-  font-size: 1.5rem;
   margin-top: 4.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
   padding: 0 10px;
+  padding-bottom: 20px;
   color: hsl(var(--primary));
 }
 
@@ -110,7 +110,7 @@
   }
 
   .top-name {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .project-card {
