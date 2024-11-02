@@ -96,10 +96,11 @@ p {
   align-items: center;
   justify-content: center;
   height: 80vh; /* Adjusted height */
-  padding: 20px;
+  padding: 50px;
 }
 
 .hero-content {
+  margin-top: 3em;
   display: flex;
   flex-direction: column; /* Column layout for mobile-first design */
   align-items: center;
@@ -110,9 +111,9 @@ p {
 .top {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 5.5rem;
+  margin-top: 4.5rem;
   margin-bottom: 1rem;
-  padding: 15px 10px;
+  padding: 0 10px;
   color: hsl(var(--primary));
 }
 
@@ -161,24 +162,86 @@ p {
   filter: invert(100%);
 }
 
+
 .resume-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em 3em;
   padding-bottom: 0.5em;
   margin-top: 1em;
 }
 
 .resume {
   color: black;
-  padding: 10px 20px;
+  padding: 1em 2em; 
   border-radius: 5px;
   text-decoration: none;
   width: 350px;
-  height: 550px;
+  height: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.contact-grid {
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contact-item {
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 8px;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: hsl(var(--primary));
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.contact-detail {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-item {
+    padding: 1rem;
+  }
+}
+
+/* Desktop: Two columns */
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    padding: 1.5rem;
+  }
+}
 .contact-block
 {
   display: flex;
@@ -186,12 +249,12 @@ p {
   align-items: center;
   justify-content: center;
   padding-bottom: 1em;
-  margin-top: -2em;
+  margin-top: 1em;
 }
 
 .contact-animation{
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 .footer a{
