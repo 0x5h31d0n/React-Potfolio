@@ -8,9 +8,11 @@
 
 .top-name {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  margin-top: 4.5rem;
   margin-bottom: 1rem;
   padding: 0 10px;
+  color: hsl(var(--primary));
 }
 
 .projects-container {
@@ -21,15 +23,19 @@
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
+  background-color: hsl(var(--background));
+  color: hsl(var(--card));
 }
 
 .project-card {
-  border: 1.5px solid #6969f5;
+  border: 1.5px solid hsl(var(--primary));
   border-radius: 8px;
   padding: 12px;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px hsl(var(--muted));
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
 }
 
 .image-container {
@@ -37,6 +43,7 @@
   height: 300px;
   border-radius: 6px;
   overflow: hidden;
+  background-color: hsl(var(--muted));
   margin-bottom: 12px;
 }
 

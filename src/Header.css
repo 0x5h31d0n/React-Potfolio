@@ -1,12 +1,28 @@
 /* Header.css */
+@import './theme.css';
 
-header {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: center; /* Center the nav horizontally */
+  justify-content: center;
   align-items: center;
   padding: 2em;
-  color: white;
-  position: relative; /* Add relative positioning to allow absolute positioning of the menu icon */
+  background-color: hsla(var(--background), 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid hsl(var(--border));
+  transition: transform 0.3s ease;
+}
+
+.header-visible {
+  transform: translateY(0);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
 }
 
 .menu-icon {
@@ -16,6 +32,7 @@ header {
   top: 0.5em; /* Align the menu icon to the top */
   position: absolute; /* Position the menu icon absolutely */
   left: 0.5em; /* Align the menu icon to the right */
+  color: hsl(var(--foreground));
 }
 
 nav {
@@ -40,15 +57,15 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: hsl(var(--foreground));
   text-decoration: none;
   font-size: 1.4em;
 }
 
 nav a:hover{
-  text-shadow: 1px 1px 1px grey;
+  text-shadow: 1px 1px 1px hsl(var(--muted-foreground));
   font-weight: bold;
-  border-bottom: 4px solid blue;
+  border-bottom: 3px solid hsl(var(--primary));
 }
 
 

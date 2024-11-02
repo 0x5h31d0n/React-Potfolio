@@ -19,17 +19,17 @@ const Skills = () => {
     <section className="about">
       <h2>⚙️ Skills</h2>
       <div className='icons'>
-        <img src={linux} alt="Linux" className='linx'/> 
-        <img src={astro} alt="Astro" className='astro'/>
-        <img src={react} alt="React" className='react'/>
-        <img src={flask} alt="Flask" id='invert' className='flask'/>
-        <img src={django} alt="Django" id='invert' className='django'/>
-        <img src={html} alt="Html" className='html'/>
-        <img src={css} alt="Css" className='css'/>
-        <img src={mysql} alt="Mysql" className='mysql'/>
-        <img src={python} alt="python" className='python'/>
-        <img src={c} alt="c" id='invert' className='c'/>
-        <img src={java} alt="java" className='java'/>
+        <img src={linux} alt="Linux" className='linx' loading="lazy"/> 
+      <img src={astro} alt="Astro" className='astro' loading="lazy"/>
+      <img src={react} alt="React" className='react' loading="lazy"/>
+      <img src={flask} alt="Flask" id='invert' className='flask' loading="lazy"/>
+      <img src={django} alt="Django" id='invert' className='django' loading="lazy"/>
+      <img src={html} alt="Html" className='html' loading="lazy"/>
+      <img src={css} alt="Css" className='css' loading="lazy"/>
+      <img src={mysql} alt="Mysql" className='mysql' loading="lazy"/>
+      <img src={python} alt="python" className='python' loading="lazy"/>
+      <img src={c} alt="c" id='invert' className='c' loading="lazy"/>
+      <img src={java} alt="java" className='java' loading="lazy"/>
       </div>
       <Tooltip anchorSelect=".linx" place="top" style={{ backgroundColor: "rgb(0, 255, 30)", color: "#222",  fontFamily: "monospace", fontSize: "15px"}}>
         Linux

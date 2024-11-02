@@ -94,7 +94,7 @@ const ProjectCard = ({ title, description, images, technologies, features }) => 
 function Projects() {
   return (
     <section id="projects">
-      <h2 className='top-name'>My Projects</h2>
+      <h2 className='top-name'>Projects</h2>
       <div className="projects-container">
         {projectDetails.map((project, index) => (
           <ProjectCard
