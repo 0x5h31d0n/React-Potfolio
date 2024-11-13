@@ -1,4 +1,5 @@
-import React, { memo } from 'react'
+// Separate EducationCard component with memo
+import React, { memo, useEffect, useRef } from 'react'
 import '../style.css'
 
 const educationDetails = [
@@ -25,9 +26,8 @@ const educationDetails = [
   }
 ];
 
-// Separate EducationCard component with memo
 const EducationCard = memo(({ edu }) => (
-  <div className='edu'>
+  <div className='edu fade-item'>
     <h3 className='degree'>{edu.degree}</h3>
     <div className="lower-education">
       <h4 className="edu-stream">{edu.stream}</h4>
@@ -39,9 +39,33 @@ const EducationCard = memo(({ edu }) => (
 ));
 
 const Education = () => {
+  const educationRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          // Optional: Unobserve after animation
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2, // Increased threshold
+        rootMargin: '-55px' // Trigger slightly after element comes into view
+      }
+    );
+
+    if (educationRef.current) {
+      observer.observe(educationRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="about">
-      <h2>🎓 Education</h2>
+    <section className="about fade-section" ref={educationRef}>
+      <h2 className="fade-item">🎓 Education</h2>
       <div className='Education'>
         {educationDetails.map((edu) => (
           <EducationCard 
@@ -51,7 +75,7 @@ const Education = () => {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default memo(Education)
+export default memo(Education);

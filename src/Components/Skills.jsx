@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import linux from '../assets/linux.png'
 import astro from '../assets/astro.png'
 import react from '../assets/react.png'
@@ -15,21 +15,41 @@ import 'react-tooltip/dist/react-tooltip.css'
 import '../style.css'
 
 const Skills = () => {
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="about">
-      <h2>⚙️ Skills</h2>
+    <section className="about fade-section" ref={skillsRef}>
+      <h2 className="fade-item">⚙️ Skills</h2>
       <div className='icons'>
-        <img src={linux} alt="Linux" className='linx' loading="lazy"/> 
-      <img src={astro} alt="Astro" className='astro' loading="lazy"/>
-      <img src={react} alt="React" className='react' loading="lazy"/>
-      <img src={flask} alt="Flask" id='invert' className='flask' loading="lazy"/>
-      <img src={django} alt="Django" id='invert' className='django' loading="lazy"/>
-      <img src={html} alt="Html" className='html' loading="lazy"/>
-      <img src={css} alt="Css" className='css' loading="lazy"/>
-      <img src={mysql} alt="Mysql" className='mysql' loading="lazy"/>
-      <img src={python} alt="python" className='python' loading="lazy"/>
-      <img src={c} alt="c" id='invert' className='c' loading="lazy"/>
-      <img src={java} alt="java" className='java' loading="lazy"/>
+        {/* Add fade-item class to each img */}
+        <img src={linux} alt="Linux" className='linx fade-item' loading="lazy"/> 
+        <img src={astro} alt="Astro" className='astro fade-item' loading="lazy"/>
+        <img src={react} alt="React" className='react fade-item' loading="lazy"/>
+        <img src={flask} alt="Flask" id='invert' className='flask fade-item' loading="lazy"/>
+        <img src={django} alt="Django" id='invert' className='django fade-item' loading="lazy"/>
+        <img src={html} alt="Html" className='html fade-item' loading="lazy"/>
+        <img src={css} alt="Css" className='css fade-item' loading="lazy"/>
+        <img src={mysql} alt="Mysql" className='mysql fade-item' loading="lazy"/>
+        <img src={python} alt="python" className='python fade-item' loading="lazy"/>
+        <img src={c} alt="c" id='invert' className='c fade-item' loading="lazy"/>
+        <img src={java} alt="java" className='java fade-item' loading="lazy"/>
       </div>
       <Tooltip anchorSelect=".linx" place="top" style={{ backgroundColor: "rgb(0, 255, 30)", color: "#222",  fontFamily: "monospace", fontSize: "15px"}}>
         Linux

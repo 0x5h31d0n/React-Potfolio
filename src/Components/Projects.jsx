@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import '../projects.css'; // Make sure to import the CSS file
+import React, { useState, useEffect, useRef } from 'react';
+import '../projects.css';
 import varun1 from '../assets/varun1.png';
-import varun2 from '../assets/varun2.png'; // Add more images as needed
-import varun3 from '../assets/varun3.png'; // Add more images as needed
+import varun2 from '../assets/varun2.png';
+import varun3 from '../assets/varun3.png';
 import docu1 from '../assets/docu1.png';
-import docu2 from '../assets/docu2.png'; // Add more images as needed
-import docu3 from '../assets/docu3.png'; // Add more images as needed
-import docu4 from '../assets/docu4.png'; // Add more images as needed
+import docu2 from '../assets/docu2.png';
+import docu3 from '../assets/docu3.png';
+import docu4 from '../assets/docu4.png';
+import cert from '../assets/certificate.png';
+import prize from '../assets/prizerecv.jpg';
 
 const projectDetails = [
   {
@@ -27,7 +29,7 @@ const projectDetails = [
     features: [
       'Real-time vessel tracking and monitoring',
       'Interactive visualization using Leaflet.js',
-      'OCR-based Handwritten comm message identification with EasyOCR',
+      'OCR-based vessel identification with EasyOCR',
       'Secure communication protocols',
       'Automated alert system',
       'RESTful API integration with Flask backend'
@@ -53,6 +55,23 @@ const projectDetails = [
       'Backend processing with Flask',
       'Integration with EasyOCR for text recognition'
     ]
+  },
+  {
+    title: 'Sleuth AI - AI OSINT Platform',
+    description: 'Sleuth AI OSINT Platform is a web application that uses OSINT Industries with openAI API to gather and analyze open-source intelligence data. It provides real-time insights and analytics of victim email ids and phone number. This was developed at CIDECODE Hackathon 2024 held at PES University Bangalore.',
+    images: [cert, prize],
+    technologies: [
+      'React.js',
+      'OpenAI API',
+      'pdfjs',
+      'Osint Industries API',
+    ],
+    features: [
+      'Real-time insights and analytics',
+      'Victim email ids and phone number analysis',
+      'Open-source intelligence data gathering',
+      'Integration with OpenAI API',
+    ]
   }
 ];
 
@@ -68,11 +87,11 @@ const ProjectCard = ({ title, description, images, technologies, features }) => 
   }, [images.length]);
 
   return (
-    <div className="project-card">
+    <div className="project-card fade-item">
       <div className="image-container">
         <img src={images[currentImageIndex]} alt={title} className="project-image" />
       </div>
-      <h3>{title}</h3>
+      <h3 className='project-title'>{title}</h3>
       <div className="tech-stack">
         {technologies.map((tech, index) => (
           <span key={index} className="tech-tag">{tech}</span>
@@ -92,9 +111,31 @@ const ProjectCard = ({ title, description, images, technologies, features }) => 
 };
 
 function Projects() {
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '-50px'
+      }
+    );
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="projects">
-      <h2 className='top-name'>Projects</h2>
+    <section id="projects" ref={projectsRef} className="fade-section">
+      <h2 className='top-name fade-item'>My Projects</h2>
       <div className="projects-container">
         {projectDetails.map((project, index) => (
           <ProjectCard

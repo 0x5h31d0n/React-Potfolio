@@ -1,9 +1,15 @@
 /* Base styles (mobile-first) */
+@import './theme.css';
+
 #projects {
   min-height: 100vh;
   padding: 15px 10px 60px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.project-title{
+  color: hsl(var(--foreground));
 }
 
 .top-name {
@@ -183,3 +189,29 @@
     line-height: 1.5;
   }
 }
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--delay, 0s);
+}
+
+.fade-section.fade-in .project-card.fade-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-section.fade-in .project-card.fade-item:nth-child(1) { transition-delay: 0.2s; }
+.fade-section.fade-in .project-card.fade-item:nth-child(2) { transition-delay: 0.4s; }
