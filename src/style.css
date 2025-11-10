@@ -118,8 +118,8 @@ body {
 
 /* Add to your CSS */
 .fade-section {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.8s ease-out;
 }
 
@@ -129,8 +129,8 @@ body {
 }
 
 .fade-item {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 1s ease-out;
 }
 
@@ -254,6 +254,83 @@ p {
   font-size: 1rem !important;
   color: hsl(var(--muted-foreground)) !important;
   font-weight: 400;
+}
+
+.Achievements {
+  padding-bottom: 4em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 0;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding: 1.5em;
+  border-left: 3px solid hsl(var(--primary));
+  background-color: hsl(var(--card));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.achievement-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(var(--primary));
+}
+
+.achievement-type {
+  display: inline-block;
+  background-color: hsla(var(--primary), 0.15);
+  color: hsl(var(--primary));
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.achievement-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: hsl(var(--foreground));
+  line-height: 1.5;
+}
+
+.achievement-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding-top: 0.5em;
+  border-top: 1px solid hsla(var(--border), 0.5);
+}
+
+.achievement-platform {
+  font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+.achievement-date {
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
 }
 
 
@@ -490,6 +567,10 @@ p {
   }
 
   .edu {
+    margin: 1em 0;
+  }
+
+  .achievement {
     margin: 1em 0;
   }
 
