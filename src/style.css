@@ -356,6 +356,8 @@ p {
   justify-content: center;
   height: 80vh; /* Adjusted height */
   padding: 50px;
+  padding-top: 120px;
+  margin-top: 0;
 }
 
 .hero-content {
@@ -584,6 +586,7 @@ p {
 @media (min-width: 768px) {
   #hero {
     flex-direction: row; /* Row layout for larger screens */
+    padding-top: 80px;
   }
 
   .hero-content {
