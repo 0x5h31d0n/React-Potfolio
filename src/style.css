@@ -199,26 +199,64 @@ p {
   color: hsl(var(--muted-foreground));
 }
 
-.Education{
+.Education {
   padding-bottom: 4em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.degree {
-    letter-spacing: 1.5px;
-    text-shadow: 1px 1px 3px black;
-  }
+.edu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1.5em;
+  border-left: 3px solid hsl(var(--primary));
+  background-color: hsl(var(--card));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.edu:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edu .degree {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(var(--primary));
+}
+
+.lower-education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
 
 .edu-stream {
-  margin-top: 0.2em;
-  padding-bottom: 0.5em;
-  letter-spacing: 1.5px;
-  color: hsl(var(--primary));
+  margin: 0;
+  padding: 0;
   font-size: 1rem;
-  font-weight: 400; /* Adjust font weight if necessary */
-  -webkit-font-smoothing: antialiased; /* Optimize font rendering for WebKit browsers */
-  -moz-osx-font-smoothing: grayscale; /* Optimize font rendering for Firefox on macOS */
-  text-rendering: optimizeLegibility; 
+  color: hsl(var(--primary));
+  font-weight: 600;
 }
+
+.lower-education p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.college {
+  font-size: 1rem !important;
+  color: hsl(var(--muted-foreground)) !important;
+  font-weight: 400;
+}
+
+
 
 .footer{
   position: fixed;
@@ -452,22 +490,7 @@ p {
   }
 
   .edu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin: 1em 0;
-  }
-
-  .Education {
-    align-self: flex-start;
-    padding: 1em;
-  }
-
-  .degree {
-    font-weight: 700;
-    align-self: flex-start;
-    letter-spacing: 1.5px;
   }
 
   .footer{
